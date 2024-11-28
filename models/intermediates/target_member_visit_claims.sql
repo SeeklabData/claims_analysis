@@ -1,9 +1,15 @@
 SELECT
-    er_visit
-    , serv_date_skey
-    , urgent_care_visit
+    serv_date_skey AS Date
     , pcp_visit
+    , annual_wellness
     , preventative_visit
-    , id
+    , urgent_care_visit
+    , er_visit
+    , telehealth
+    , cardiologist_visit
+    , endocrinologist_visit
+    , gastroenterologist_visit
+    , comp_physical_exam
+    , id AS ID
 FROM
     {{ ref('stg_target_member_visit_claims') }}
